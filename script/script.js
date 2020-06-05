@@ -5,16 +5,6 @@ const carregaAudios = ($audio) =>{
     }
 }
 
-//Função que adiciona o evento click nas teclas e toca os sons de cada tecla
-const addMusicOnButtons = ($notasMusicais, $audio) => {
-    for (let i = 0; i < $notasMusicais.length; i++){
-        $notasMusicais[i].addEventListener('click', playMusic => {
-            console.log($audio[i]);
-            $audio[i].play();
-        });
-    }
-}
-
 //Função que executa cada efeito ACTIVE do css nas teclas pressionadas pelo teclado
 const executaEfeito = ($elemento) => {
     $elemento.style.background = "#fff";
@@ -24,6 +14,17 @@ const executaEfeito = ($elemento) => {
         $elemento.style.background = "rgba(0, 0, 0, 0.8)";
         $elemento.style.color = "#fff";
     }, 200)
+}
+
+//Função que adiciona o evento click nas teclas e toca os sons de cada tecla
+const addMusicOnButtons = ($notasMusicais, $audio) => {
+    for (let i = 0; i < $notasMusicais.length; i++){
+        $notasMusicais[i].addEventListener('click', playMusic => {
+            console.log($audio[i]);
+            executaEfeito($notasMusicais[i]);
+            $audio[i].play();
+        });
+    }
 }
 
 //Função que executa os sons ao pressionar determinada tecla do teclado

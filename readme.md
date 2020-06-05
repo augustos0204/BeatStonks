@@ -4,4 +4,7 @@ Meu projeto consiste em duas páginas, a primeira, pretende demonstrar uma Demon
 # Origem
 O projeto foi idealizado pelo professor da instituição SENAI Jandira [Fernando Leonid](https://github.com/fernandoleonid) - Com uma atividade proposta na página "Demo".
 
+# Changelog
+Bug das teclas não aparecerem o efeito corrigido
+
 ![Logotipo BeatStonks](img/BeatStonks.jpg)
